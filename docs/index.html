@@ -29,14 +29,6 @@
       {
         quadrant: 2,
         ring: 0,
-        label: "Spark",
-        active: false,
-        link: null,
-        moved: 0
-      },
-      {
-        quadrant: 2,
-        ring: 0,
         label: "ReactJS",
         active: false,
         link: null,
@@ -67,7 +59,39 @@
         active: false,
         link: null,
         moved: 0
-      }
+      },
+      {
+        quadrant: 1,
+        ring: 0,
+        label: "Docker",
+        active: false,
+        link: null,
+        moved: 0
+      },
+      {
+        quadrant: 1,
+        ring: 2,
+        label: "Kubernetes",
+        active: false,
+        link: null,
+        moved: 0
+      },
+      {
+        quadrant: 1,
+        ring: 1,
+        label: "OpenTracing",
+        active: false,
+        link: null,
+        moved: 1
+      },
+      {
+        quadrant: 1,
+        ring: 2,
+        label: "AWS Lambda",
+        active: false,
+        link: null,
+        moved: 0
+      },
     ];
     const dataManagementEntries = [
       {
@@ -138,7 +162,7 @@
       },
       title: "Azavea Tech Radar — 2021.03",
       quadrants: [
-        { name: "Languages" },
+        { name: "Development tools" },
         { name: "Infrastructure" },
         { name: "Frameworks" },
         { name: "Geospatial Data" }
@@ -153,38 +177,6 @@
       // zoomed_quadrant: 0,
       //ENTRIES
       entries: [
-        {
-          quadrant: 1,
-          ring: 0,
-          label: "Docker",
-          active: false,
-          link: null,
-          moved: 0
-        },
-        {
-          quadrant: 1,
-          ring: 2,
-          label: "Kubernetes",
-          active: false,
-          link: null,
-          moved: 0
-        },
-        {
-          quadrant: 1,
-          ring: 1,
-          label: "OpenTracing",
-          active: false,
-          link: null,
-          moved: 1
-        },
-        {
-          quadrant: 1,
-          ring: 2,
-          label: "AWS Lambda",
-          active: false,
-          link: null,
-          moved: 0
-        },
         ...devToolingEntries,
         ...dataManagementEntries,
         ...infrastructureEntries,
