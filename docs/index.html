@@ -2,7 +2,7 @@
 
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <title>Zalando Tech Radar</title>
+  <title>Azavea Tech Radar</title>
   <link rel="shortcut icon" href="https://www.zalando.de/favicon.ico">
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -16,22 +16,46 @@
   <svg id="radar"></svg>
 
   <script>
-    const languageEntries = [];
-    const frameworkEntries = [
+    const devToolingEntries = [
       {
-        quadrant: 2,
-        ring: 3,
-        label: "Airflow",
-        active: false,
-        link: "../data_processing/airflow.html",
-        moved: 0,
-      },
+        quadrant: 0,
+        ring: 2,
+        label: "esbuild",
+        active: true,
+        link: null
+      }
+    ];
+    const frameworkEntries = [
       {
         quadrant: 2,
         ring: 0,
         label: "Spark",
         active: false,
-        link: "../data_processing/spark.html",
+        link: null,
+        moved: 0
+      },
+      {
+        quadrant: 2,
+        ring: 0,
+        label: "ReactJS",
+        active: false,
+        link: null,
+        moved: 0
+      },
+      {
+        quadrant: 2,
+        ring: 0,
+        label: "Http4s",
+        active: false,
+        link: null,
+        moved: 0
+      },
+      {
+        quadrant: 2,
+        ring: 0,
+        label: "tapir",
+        active: false,
+        link: null,
         moved: 0
       },
     ];
@@ -39,17 +63,9 @@
       {
         quadrant: 1,
         ring: 0,
-        label: "AWS EMR",
-        active: false,
-        link: "../data_processing/aws_emr.html",
-        moved: 0
-      },
-      {
-        quadrant: 1,
-        ring: 0,
         label: "AWS ECS",
         active: false,
-        link: "",
+        link: null,
         moved: 0
       }
     ];
@@ -59,7 +75,7 @@
         ring: 0,
         label: "COGs",
         active: false,
-        link: "",
+        link: null,
         moved: 0
       },
       {
@@ -67,7 +83,7 @@
         ring: 0,
         label: "MVT",
         active: false,
-        link: "",
+        link: null,
         moved: 0
       },
       {
@@ -75,7 +91,7 @@
         ring: 3,
         label: "JPEG2000",
         active: false,
-        link: "",
+        link: null,
         moved: 0
       },
       {
@@ -83,7 +99,7 @@
         ring: 3,
         label: "HDF",
         active: false,
-        link: "",
+        link: null,
         moved: 0
       },
       {
@@ -91,7 +107,7 @@
         ring: 2,
         label: "NetCDF",
         active: false,
-        link: "",
+        link: null,
         moved: 0
       },
       {
@@ -99,9 +115,17 @@
         ring: 0,
         label: "AWS S3",
         active: false,
-        link: "../datastores/aws_s3.html",
+        link: null,
         moved: 0
       },
+      {
+        quadrant: 3,
+        ring: 0,
+        label: "PostgreSQL",
+        active: false,
+        link: null,
+        moved: 0
+      }
     ];
     radar_visualization({
       svg_id: "radar",
@@ -112,7 +136,7 @@
         grid: "#bbb",
         inactive: "#ddd"
       },
-      title: "Zalando Tech Radar — 2020.07",
+      title: "Azavea Tech Radar — 2021.03",
       quadrants: [
         { name: "Languages" },
         { name: "Infrastructure" },
@@ -129,166 +153,28 @@
       // zoomed_quadrant: 0,
       //ENTRIES
       entries: [
-
-
-        {
-          quadrant: 3,
-          ring: 0,
-          label: "Cassandra",
-          active: false,
-          link: "../datastores/cassandra.html",
-          moved: 0
-        },
-        {
-          quadrant: 3,
-          ring: 0,
-          label: "Elasticsearch",
-          active: false,
-          link: "../datastores/elasticsearch.html",
-          moved: 0
-        },
-        {
-          quadrant: 3,
-          ring: 0,
-          label: "PostgreSQL",
-          active: false,
-          link: "../datastores/postgresql.html",
-          moved: 0
-        },
-        {
-          quadrant: 3,
-          ring: 0,
-          label: "Redis",
-          active: false,
-          link: "../datastores/redis.html",
-          moved: 0
-        },
-        {
-          quadrant: 3,
-          ring: 1,
-          label: "AWS DynamoDB",
-          active: false,
-          link: "../datastores/aws_dynamodb.html",
-          moved: 0
-        },
-        {
-          quadrant: 3,
-          ring: 3,
-          label: "Memcached",
-          active: false,
-          link: "../datastores/memcached.html",
-          moved: 0
-        },
-        {
-          quadrant: 2,
-          ring: 0,
-          label: "Akka (Scala)",
-          active: false,
-          link: "../frameworks/akka_scala.html",
-          moved: 0
-        },
-        {
-          quadrant: 2,
-          ring: 0,
-          label: "Node.js",
-          active: false,
-          link: "../frameworks/nodejs.html",
-          moved: 0
-        },
-        {
-          quadrant: 2,
-          ring: 0,
-          label: "ReactJS",
-          active: false,
-          link: "../frameworks/reactjs.html",
-          moved: 0
-        },
-        {
-          quadrant: 2,
-          ring: 0,
-          label: "scikit-learn",
-          active: false,
-          link: "../frameworks/scikit_learn.html",
-          moved: 0
-        },
-        {
-          quadrant: 2,
-          ring: 1,
-          label: "Akka-Http",
-          active: false,
-          link: "../frameworks/akka_http.html",
-          moved: 0
-        },
-        {
-          quadrant: 2,
-          ring: 1,
-          label: "TensorFlow",
-          active: false,
-          link: "../frameworks/tensorflow.html",
-          moved: 0
-        },
-        {
-          quadrant: 2,
-          ring: 2,
-          label: "gRPC",
-          active: false,
-          link: "../frameworks/grpc.html",
-          moved: 0
-        },
-        {
-          quadrant: 2,
-          ring: 2,
-          label: "Http4s",
-          active: false,
-          link: "../frameworks/http4s.html",
-          moved: 0
-        },
-        {
-          quadrant: 2,
-          ring: 2,
-          label: "Redux",
-          active: false,
-          link: "../frameworks/redux.html",
-          moved: 0
-        },
-        {
-          quadrant: 2,
-          ring: 2,
-          label: "Vue.js",
-          active: false,
-          link: "../frameworks/vuejs.html",
-          moved: 0
-        },
         {
           quadrant: 1,
           ring: 0,
           label: "Docker",
           active: false,
-          link: "../infrastructure/docker.html",
+          link: null,
           moved: 0
         },
         {
           quadrant: 1,
-          ring: 0,
+          ring: 2,
           label: "Kubernetes",
           active: false,
-          link: "../infrastructure/kubernetes.html",
+          link: null,
           moved: 0
         },
         {
           quadrant: 1,
-          ring: 0,
-          label: "Nginx",
-          active: false,
-          link: "../infrastructure/nginx.html",
-          moved: 0
-        },
-        {
-          quadrant: 1,
-          ring: 0,
+          ring: 1,
           label: "OpenTracing",
           active: false,
-          link: "../infrastructure/opentracing.html",
+          link: null,
           moved: 1
         },
         {
@@ -296,145 +182,10 @@
           ring: 2,
           label: "AWS Lambda",
           active: false,
-          link: "../infrastructure/aws_lambda.html",
+          link: null,
           moved: 0
         },
-        {
-          quadrant: 0,
-          ring: 0,
-          label: "Go",
-          active: true,
-          link: "go.html",
-          moved: 0
-        },
-        {
-          quadrant: 0,
-          ring: 0,
-          label: "JavaScript",
-          active: true,
-          link: "javascript.html",
-          moved: 0
-        },
-        {
-          quadrant: 0,
-          ring: 0,
-          label: "OpenAPI (Swagger)",
-          active: true,
-          link: "openapi_swagger.html",
-          moved: 0
-        },
-        {
-          quadrant: 0,
-          ring: 0,
-          label: "Python",
-          active: true,
-          link: "python.html",
-          moved: 0
-        },
-        {
-          quadrant: 0,
-          ring: 0,
-          label: "Scala",
-          active: true,
-          link: "scala.html",
-          moved: 0
-        },
-        {
-          quadrant: 0,
-          ring: 0,
-          label: "Swift",
-          active: true,
-          link: "swift.html",
-          moved: 0
-        },
-        {
-          quadrant: 0,
-          ring: 3,
-          label: "Clojure",
-          active: true,
-          link: "clojure.html",
-          moved: -1
-        },
-        {
-          quadrant: 0,
-          ring: 1,
-          label: "GraphQL",
-          active: true,
-          link: "graphql.html",
-          moved: 1
-        },
-        {
-          quadrant: 0,
-          ring: 3,
-          label: "Haskell",
-          active: true,
-          link: "haskell.html",
-          moved: -1
-        },
-        {
-          quadrant: 0,
-          ring: 1,
-          label: "Kotlin",
-          active: true,
-          link: "kotlin.html",
-          moved: 0
-        },
-        {
-          quadrant: 0,
-          ring: 1,
-          label: "TypeScript",
-          active: true,
-          link: "typescript.html",
-          moved: 0
-        },
-        {
-          quadrant: 0,
-          ring: 2,
-          label: "R",
-          active: true,
-          link: "r.html",
-          moved: 0
-        },
-        {
-          quadrant: 0,
-          ring: 3,
-          label: "Rust",
-          active: true,
-          link: "rust.html",
-          moved: -1
-        },
-        {
-          quadrant: 3,
-          ring: 0,
-          label: "AWS SNS",
-          active: false,
-          link: "../queues/aws_sns.html",
-          moved: 0
-        },
-        {
-          quadrant: 3,
-          ring: 0,
-          label: "AWS SQS",
-          active: false,
-          link: "../queues/aws_sqs.html",
-          moved: 0
-        },
-        {
-          quadrant: 3,
-          ring: 1,
-          label: "RabbitMQ",
-          active: false,
-          link: "../queues/rabbitmq.html",
-          moved: 0
-        },
-        {
-          quadrant: 3,
-          ring: 2,
-          label: "AWS Kinesis",
-          active: false,
-          link: "../queues/aws_kinesis.html",
-          moved: 0
-        },
+        ...devToolingEntries,
         ...dataManagementEntries,
         ...infrastructureEntries,
         ...frameworkEntries
@@ -456,7 +207,7 @@
 
         <ul>
           <li><strong>ADOPT</strong> &mdash; Technologies we have high confidence in to serve our purpose, also in large
-            scale. Technologies with a usage culture in our Zalando production environment, low risk and recommended to
+            scale. Technologies with a usage culture in our Azavea production environment, low risk and recommended to
             be widely used.</li>
           <li><strong>TRIAL</strong> &mdash; Technologies that we have seen work with success in project work to solve a
             real problem; first serious usage experience that confirm benefits and can uncover limitations. TRIAL
@@ -478,7 +229,7 @@
         <h3>What is the purpose?</h3>
 
         <p>
-          The Tech Radar is a tool to inspire and support engineering teams at Zalando to pick the best technologies for
+          The Tech Radar is a tool to inspire and support engineering teams at Azavea to pick the best technologies for
           new projects; it provides a platform to share knowledge and experience in technologies, to reflect on
           technology decisions and continuously evolve our technology landscape. Based on the <a
             href="https://www.thoughtworks.com/radar">pioneering work of ThoughtWorks</a>, our Tech Radar sets out the
@@ -489,23 +240,15 @@
         <h3>How do we maintain it?</h3>
 
         <p>
-          The Tech Radar is maintained by the <em>Zalando Technologists Guild</em> &mdash; an open group of senior
-          Zalando technologists committed to devote time to the Tech Radar purpose. The guild self organises to maintain
-          the Tech Radar documents, including this public version. Assignment of technologies to rings is the outcome of
-          ring change proposals, which are discussed and voted on in guild meetings. The Tech Radar depends on active
-          participation and input from all engineering teams at Zalando.
+          The Tech Radar is maintained in an ad hoc manner based on people's interest or prompting after 10% time
+          projects.
+          Currently there is no formal process for adding or changing the ring of a technology listed.
         </p>
 
         <p>
-          There is also an <a href="https://techradar.zalando.net/">internal version of the Tech Radar</a> that contains
-          background information about each technology &mdash; when to use it, pros and cons, main risks, which teams at
-          Zalando are using it, and for what purpose.
-        </p>
-
-        <p>
-          <em>BTW, if you would like to create your own Tech Radar &mdash; we have <a
+          <em>BTW, if you would like to create your own Tech Radar &mdash; Zalando has <a
               href="https://github.com/zalando/tech-radar">open sourced the code</a> to generate this
-            visualization.</em>
+            visualization. We have forked it with enthusiasm and gratitude.</em>
         </p>
 
       </td>
