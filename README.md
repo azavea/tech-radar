@@ -9,6 +9,31 @@ This repository contains the code to generate the visualization:
 [ `radar.js` ](/docs/radar.js) (based on [d3.js v4](https://d3js.org)).
 Feel free to use and adapt it for your own purposes.
 
+## Local Development
+
+1. install dependencies with yarn (or npm):
+
+``` 
+
+yarn 
+```
+
+2. start local dev server:
+
+``` 
+
+yarn start
+```
+
+3. your default browser should automatically open and show the url
+
+ 
+
+``` 
+
+http://localhost:3000/
+```
+
 ## Adding a new entry
 
 If all you want to do is add a new entry, you'll need to create a javascript object like:
@@ -25,7 +50,7 @@ If all you want to do is add a new entry, you'll need to create a javascript obj
 
 Then put it in the appropriate quadrant. The quadrants we use are:
 
-0. Development tools -- think things like `webpack`,      `sbt`,      `prettier`, etc.
+0. Development tools -- think things like `webpack`,        `sbt`,        `prettier`, etc.
 1. Infrastructure -- this will largely include technology that either _is_ a cloud service, deploys cloud services, or makes working with cloud services easier
 2. Frameworks -- these are ways of doing big technical tasks. For example, React is a framework for frontend applications, Http4s is a framework for backend applications, and tapir is a framework for keeping backend applications and docs in sync.
 3. Geospatial data -- this quadrant includes ways of organizing, visualizing, and storing geospatial data.
@@ -110,31 +135,6 @@ Entries are positioned automatically so that they don't overlap.
 
 As a working example, you can check out `docs/index.html` &mdash; the source of our [public Tech
 Radar](http://zalando.github.io/tech-radar/).
-
-## Local Development
-
-1. install dependencies with yarn (or npm):
-
-``` 
-
-yarn 
-```
-
-2. start local dev server:
-
-``` 
-
-yarn start
-```
-
-3. your default browser should automatically open and show the url
-
- 
-
-``` 
-
-http://localhost:3000/
-```
 
 ## License
 
