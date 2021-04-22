@@ -1,6 +1,6 @@
 # Motivation
 
-At [Azavea](https://www.azavea.com/), we maintain a [public Tech
+At [Azavea](https://www.azavea.com/), we (hope someday to) maintain a [public Tech
 Radar](http://azavea.github.io/tech-radar/) to help our engineering teams
 align on technology choices. It is based on the [pioneering work
 by ThoughtWorks](https://www.thoughtworks.com/radar).
@@ -8,6 +8,8 @@ by ThoughtWorks](https://www.thoughtworks.com/radar).
 This repository contains the code to generate the visualization:
 [ `radar.js` ](/docs/radar.js) (based on [d3.js v4](https://d3js.org)).
 Feel free to use and adapt it for your own purposes.
+
+<img src="./images/tech-radar.png" height="400"/>
 
 ## Local Development
 
