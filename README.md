@@ -36,6 +36,12 @@ yarn start
 http://localhost:3000/
 ```
 
+## K8S Deployment
+
+1. `docker build -t quay.io/geotrellis/azavea-tech-radar:latest .`
+    * `docker push quay.io/geotrellis/azavea-tech-radar:latest`
+2. `kubectl apply -f manifests/tech-radar.yaml`
+
 ## Adding a new entry
 
 If all you want to do is add a new entry, you'll need to create a javascript object like:

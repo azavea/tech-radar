@@ -1,0 +1,29 @@
+# create tech-radar namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: tech-radar
+  labels:
+    name: tech-radar
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tech-radar-deployment
+  namespace: tech-radar
+spec:
+  selector:
+    matchLabels:
+      app: tech-radar
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: tech-radar
+    spec:
+      containers:
+      - name: tech-radar
+        image: quay.io/geotrellis/azavea-tech-radar:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
