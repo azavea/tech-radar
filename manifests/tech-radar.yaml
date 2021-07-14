@@ -24,6 +24,6 @@ spec:
       containers:
       - name: tech-radar
         image: quay.io/geotrellis/azavea-tech-radar:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
